@@ -1,0 +1,15 @@
+<div class="border">
+    <h2 *ngFor="let item of shoppingList">{{item}}</h2>
+    <div *ngIf="testBool">
+
+        <p *ngFor="let item of shoppingList">{{item}}</p>
+
+    </div>
+
+    <button (click)="toggleTestBool()">Toggle View</button>
+
+    
+    <app-child 
+    *ngFor="let item of shoppingList" [shoppingListItem]="item"
+    ></app-child>
+</div>
